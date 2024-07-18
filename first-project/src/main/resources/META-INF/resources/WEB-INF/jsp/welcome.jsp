@@ -9,8 +9,8 @@
 <%@ include file="common/navigation.jsp" %>
 
 <div class="container">
-	welcome ${name}<br>
-<a href="todolist">manage</a>your todos
+	<h3>welcome ${name}</h3><br>
+<h3><a href="todolist" >manage</a>your todos</h3>
 </div>
 
 <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>

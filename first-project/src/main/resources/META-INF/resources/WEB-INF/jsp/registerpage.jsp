@@ -5,16 +5,19 @@
 	<meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <title>Login page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Registration</title>
 </head>
 <body>
 <div class="container">
-	login Here!
-	<div class="mb-3">${error}</div>
-	<div class="mb-3">${success}</div>
-	<div class="mb-3">${invalid}</div>
+	<h4>Register Here!</h4><br>
+	<div class="mb-3">${notnew}</div>
+	
+	
 	<form:form method="post" modelAttribute="cuser">
+	<fieldset class="mb-3">
+		<form:label path="email">Email</form:label>
+		<form:input type="text" path="email" required="required"/>
+	</fieldset>	
 	<fieldset class="mb-3">
 		<form:label path="username">UserName</form:label>
 		<form:input type="text" path="username" required="required"/>
@@ -23,7 +26,7 @@
 		<form:label path="password">Password</form:label>
 		<form:input type="password" path="password" required="required"/>
 	</fieldset>	
-		<input type="submit" class="btn btn-success"><h3>Don't have an acoount?</h3><a href="newregister">singup</a>
+		<input type="submit" class="btn btn-success">
 	</form:form>
 </div>
 
