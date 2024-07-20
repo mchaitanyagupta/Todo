@@ -34,14 +34,15 @@ public class TodoController {
 		this.userserviceimpl=userserviceimpl;
 	} 
 	@RequestMapping(value="todolist")
-	public String todolist(@ModelAttribute User cuser,Model model) {
+	public String todolist(@SessionAttribute User cuser,Model model) {
 		model.addAttribute("todos", todoserviceimpl.findAllByuserid(cuser.getUserid()));
 		return "todos";
 	}
 	@RequestMapping(value="addtodo", method=RequestMethod.GET)
-	public String Addnewtodo(@ModelAttribute User cuser,Model model) {
+	public String Addnewtodo(@SessionAttribute User cuser,Model model) {
 		Todo ntodo=new Todo();
-		ntodo.setUserid(cuser.getUserid());
+		ntodo.setUserid(cuser.getUserid()); 
+		ntodo.setDone(false);
 		model.addAttribute("todo", ntodo);
 		return "addtodopage";
 	}

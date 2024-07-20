@@ -23,6 +23,8 @@
 		<form:input type="text" path="targetdate" required="required"/>
 		<form:errors path="targetdate" cssClass="text-warning"/>	
 	</fieldset>	
+	<form:input type="hidden" path="done"/>
+	<form:input type="hidden" path="userid"/>
 	
 		<input type="submit" class="btn btn-success">
 	</form:form>
